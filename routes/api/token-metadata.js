@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
     })
 });
 
-router.get('/:tokenId', function(req, res, next) {
+router.get('/:tokenId.json', function(req, res, next) {
   let tokenId = parseInt(req.params.tokenId);
   metadataRepo.getById(tokenId)
     .then((data) => {
