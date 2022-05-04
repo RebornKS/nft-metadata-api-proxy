@@ -30,6 +30,9 @@ const MetadataRepo = {
             .then(res => {
               return res.json();
             })
+            .catch((error) => {
+              return { message: `IPFS timed out. Please try again later.`, error: error };
+            })
             .then((data) => {
               return data;
             })
